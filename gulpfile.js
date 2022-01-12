@@ -12,13 +12,16 @@ const server = require('./gulp/tasks/server')
 const watcher = () => {
 	gulp.watch(folders.watch.assets, assets)
 	gulp.watch(folders.watch.templates, templates)
-  gulp.watch(folders.watch.styles, styles)
+	gulp.watch(folders.watch.styles, styles)
 	gulp.watch(folders.watch.scripts, scripts)
 }
 
-const dev = gulp.series(clean, gulp.parallel(assets, templates, styles, scripts), gulp.parallel(watcher, server))
-const prod = gulp.series(clean, gulp.parallel(assets, templates, styles, scripts))
+const build = gulp.series(clean, gulp.parallel(assets, templates, styles, scripts))
+const watch = gulp.series(clean, gulp.parallel(assets, templates, styles, scripts), gulp.parallel(watcher, server))
+const dev = gulp.series(clean, gulp.parallel(assets, styles, scripts), watcher)
+const prod = gulp.series(clean, gulp.parallel(assets, styles, scripts))
 
-gulp.task('prod', prod)
+gulp.task('watch', watch)
+gulp.task('build', build)
 gulp.task('dev', dev)
-gulp.task('default', dev)
+gulp.task('prod', prod)
