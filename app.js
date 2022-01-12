@@ -11,6 +11,8 @@ app.set('views', path.resolve(__dirname, 'templates'))
 app.use(express.static(path.resolve(__dirname, 'client', 'dist')))
 
 app.use('/', require('./routes/main'))
+app.use('/', require('./routes/catalog'))
+app.use('/', require('./routes/basket'))
 
 const start = () => {
 	try {
