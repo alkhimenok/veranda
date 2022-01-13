@@ -21,7 +21,7 @@ const watch = gulp.series(clean, gulp.parallel(assets, templates, styles, script
 const dev = gulp.series(clean, gulp.parallel(assets, styles, scripts), watcher)
 const prod = gulp.series(clean, gulp.parallel(assets, styles, scripts))
 
-gulp.task('watch', watch)
 gulp.task('build', build)
+gulp.task('watch', watch)
 gulp.task('dev', dev)
 gulp.task('prod', prod)
