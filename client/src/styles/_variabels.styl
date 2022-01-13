@@ -17,22 +17,24 @@ transparent = transparent
 primaryColor = #000000
 secondaryColor = #787878
 defaultColor = #ffffff
-transparentPrimaryColor = #00000006
+dangerColor = #DBDEE4
+errorColor = #991a1a
+transparentPrimaryColor = #00000060
+transparentDefaultColor = #ffffff60
 
 border = base * 0.2 solid
 
 delay = 0.2s
 longDelay = 0.6s ease-in-out
 
-breackpointXLMax = 1180px
-breackpointLGMax = 992px
-breackpointMDMax = 768px
-breackpointSMMax = 576px
-breackpointXSMax = 370px
-
 breackpointXSMin = 0px
-breackpointSMMin = $breackpointXSMax + 1px // 371px
-breackpointMDMin = $breackpointSMMax + 1px // 577px
-breackpointLGMin = $breackpointMDMax + 1px // 769px
-breackpointXLMin = $breackpointLGMax + 1px // 993px
-breackpointXXLMin = $breackpointXLMax + 1px // 1181px
+breackpointXSMax = 576px
+breackpointSMMin = breackpointXSMax + 1 // 577
+breackpointSMMax = 768px
+breackpointMDMin = breackpointSMMax + 1 // 769
+breackpointMDMax = 992px
+breackpointLGMin = breackpointMDMax + 1 // 993
+breackpointLGMax = 1200px
+breackpointXLMin = breackpointLGMax + 1 // 1201
+breackpointXLMax = 1400px
+breackpointXXLMin = breackpointXLMax + 1 // 1401
