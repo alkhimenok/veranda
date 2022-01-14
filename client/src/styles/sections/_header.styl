@@ -1,5 +1,6 @@
 .header
-  @media screen and (max-width (breackpointXSMax * 1px)) 
+  padding sizeXXL 0
+  @media screen and (max-width breackpointXSMax) 
     &._show-menu
       .header__menu
         right 0
@@ -16,15 +17,18 @@
           transform rotate(-45deg)
           background-color errorColor
 
+// .header__container 
+//   &._container
+
 .header__body
   width: 100%
-  padding sizeXXL 0
   dflex(center, space-between)
+  // &._body
 
 .header__logo
   flex 0 0 33.333%
   padding 0 0 sizeSM 0
-  &._logo 
+  // &._logo
 
 .header__menu
   @media screen and (min-width breackpointXSMax) 

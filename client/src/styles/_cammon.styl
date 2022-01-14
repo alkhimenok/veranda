@@ -1,4 +1,10 @@
-.container 
+._screen
+  height 100vh
+  dflex(center, space-between, column)
+  & > *
+    width 100% 
+
+._container 
   max-width maxWidth
   margin 0 auto
 
@@ -10,6 +16,7 @@
   font-size sizeXL
   text-transform capitalize
   transition delay
+  user-select none
   cursor pointer
 
 ._title
@@ -26,12 +33,13 @@
   line-height 125%
 
 ._btn
-  padding sizeXS
+  padding sizeXS sizeMD
   font-size sizeLG
   border-radius base * 5
   border border primaryColor
   text-transform capitalize
   transition delay
+  cursor pointer
   &:hover
     color defaultColor
     background-color secondaryColor
@@ -43,4 +51,3 @@
   object-fit cover
   object-position center
   border-radius base * 1
-  

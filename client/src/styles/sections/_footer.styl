@@ -1,25 +1,61 @@
-.footer 
+.footer
+  padding sizeLG 0
+  background-color secondaryColor
 
-// .footer__body 
+// .footer__container
+//   &._container
 
-// .footer__logo 
-//   &._logo 
+.footer__body 
+  @media screen and (min-width breackpointXLMin) 
+    dflex(center, space-between)
+  @media screen and (max-width breackpointLGMax)
+    dflex(center, center, column)
+    text-align: center
+    removeMB()
+    & > * 
+      margin 0 0 sizeXL 0
+  // &._body
 
-// .footer__address 
+.footer__logo 
+  color defaultColor
+  // &._logo 
 
-// .footer__payment 
+.footer__address
+  color defaultColor
+  line-height 170%
 
-// .footer__subtitle 
+.footer__payment 
+  color defaultColor
 
-// .footer__list 
+.footer__subtitle 
+  margin 0 0 sizeXS 0
 
-// .footer__card 
+.footer__list
+  removeMR()
 
-// ._icon-mastercard 
+.footer__card
+  margin 0 sizeLG 0 0
+  font-size sizeLG 
+//  &._icon-mastercard 
+//  &._icon-visa
 
-// .footer__call 
+.footer__call 
+  dflex(center, center, column)
 
-// .footer__phone 
+.footer__phone
+  margin 0 0 sizeXS 0
+  font-family defaultFont
+  font-size sizeMD
+  color defaultColor
+  border-bottom border transparent
+  transition delay
+  &:hover
+    border-color defaultColor
 
-// .footer__btn 
+.footer__btn 
+  color defaultColor
+  border-color defaultColor
+  &:hover
+    color primaryColor
+    background-color defaultColor
 //   &._btn 
