@@ -1,5 +1,11 @@
 .header
+  position: fixed
+  top 0
+  left 0
+  z-index: 2
   padding sizeXXL 0
+  background-color dangerColor
+  border-bottom: base * 1.5 solid secondaryColor
   @media screen and (max-width breackpointXSMax) 
     &._show-menu
       .header__menu
@@ -123,3 +129,5 @@
     &::before,
     &::after
       background-color secondaryColor
+  @media screen and (min-width breackpointXSMax) 
+    display: none
