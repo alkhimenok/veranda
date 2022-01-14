@@ -1,15 +1,36 @@
+mixin slide(img, subtitle, text)
+  li(class="blog__slide")
+    img(class="blog__img _img" src=img)
+    .blog__aside
+      h3(class="blog__subtitle _subtitle")= subtitle
+      p(class="blog__text _text")= text
+      a(class="blog__link _text") Читать далее
+
 doctype html
 html(lang="en")
   include partials/head
   body
     .wrapper._screen
       include partials/header
-      main(class="home")
-        img(class="home__background", src="/assets/images/home.jpg")
-        .home__container._container
-          .home__body._body
-            .home__banner
-              h2(class="home__title _title") Букет для любого случая втвоей жизни
-              h3(class="home__subtitle _subtitle") Онлайн-магазин цветов позволит в несколько кликов выбратьизаказать самую подходящую композицию для&nbsp;любогособытия в вашей жизни.
-              button(class="home__btn _btn") Выбрать
+      main(class="main")
+        section(class="main__home home")
+          img(class="home__background", src="/assets/images/home.jpg")
+          .home__container._container
+            .home__body._body
+              .home__banner
+                h2(class="home__title _title") Букет для любого случая втвоей жизни
+                h3(class="home__subtitle _subtitle") Онлайн-магазин цветов позволит в несколько кликов выбратьизаказать самую подходящую композицию для&nbsp;любогособытия в вашей жизни.
+                button(class="home__btn _btn") Выбрать
+        section(class="main__blog blog")
+          .blog__container._container
+            .blog__body._body
+              h2(class="blog__title _title") Наш блог
+              .blog__slider
+                button(class="blog__btn _btn-prev")
+                ul(class="blog__list")
+                  +slide('/assets/images/blog/1.jpg', 'Букет без повода. Каким он должен быть?', 'На сегодняшний день мы видим огромное многообразие букетов, глядя на которые, возникает желание забрать их все.')
+                  +slide('/assets/images/blog/2.jpg', '8 Марта - особый день для наших прекрасных дам!', 'У многих в голове  всего один вопрос - обязательно ли в этот день дарить тюльпаны? Если да, то какими они должны быть?')
+                  +slide('/assets/images/blog/1.jpg', 'Букет без повода. Каким он должен быть?', 'На сегодняшний день мы видим огромное многообразие букетов, глядя на которые, возникает желание забрать их все.')
+                  +slide('/assets/images/blog/2.jpg', '8 Марта - особый день для наших прекрасных дам!', 'У многих в голове  всего один вопрос - обязательно ли в этот день дарить тюльпаны? Если да, то какими они должны быть?')
+                button(class="blog__btn _btn-next")
       include partials/footer
