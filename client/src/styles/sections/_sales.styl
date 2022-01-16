@@ -1,0 +1,35 @@
+.sales 
+  padding base * 8 0
+
+.sales__container 
+  // &._container 
+
+.sales__body 
+  // &._body 
+
+.sales__title 
+  margin 0 0 base * 6 0
+  // &._title 
+
+.sales__list
+  dflex(center, space-between) 
+  margin 0 0 base * 12 0
+  @media screen and (min-width breackpointLGMin)
+    removeMR()
+  @media screen and (max-width breackpointSMMax)
+    flex-direction column
+    removeMB()
+
+.sales__card 
+  margin 0 10% 0 0
+  @media screen and (min-width breackpointMDMin)
+    width 33.333%
+  @media screen and (max-width breackpointMDMax)
+    margin 0 base * 2 0 0
+  @media screen and (max-width breackpointSMMax)
+    margin 0 0 base * 3 0
+
+.sales__btn 
+  display block
+  margin 0 auto
+  // &._btn 
