@@ -6,6 +6,13 @@ mixin slide(img, subtitle, text)
       p(class="blog__text _text")= text
       a(class="blog__link _text") Читать далее
 
+mixin card(img, text, price)
+  li(class="sales__card card")
+    img(class="card__img _img" src=img alt="card")
+    p(class="card__text _text")= text
+    h3(class="card__price _subtitle")= price
+    button(class="card__btn _btn") Заказать
+
 doctype html
 html(lang="en")
   include partials/head
@@ -14,7 +21,7 @@ html(lang="en")
       include partials/header
       main(class="main")
         section(class="main__home home")
-          img(class="home__background", src="/assets/images/home.jpg" alt="home")
+          img(class="home__background" src="/assets/images/home.jpg" alt="home")
           .home__container._container
             .home__body._body
               .home__banner
@@ -42,5 +49,14 @@ html(lang="en")
                 h3(class="about__subtitle _subtitle") - Специальная технология сборки позволяет сохранять естественный микроклимат растений.
                 h3(class="about__subtitle _subtitle") - Мы используем специальный раствор Chrysal, продлевающий жизнь цветов.
                 h3(class="about__subtitle _subtitle") - Мы всегда в курсе самых новейших тенденций во флористике, поэтому ваш букет будет всегда неотразим.
-              img(class="about__img _img" src="/assets/images/about.jpg", alt="about")
+              img(class="about__img _img" src="/assets/images/about.jpg" alt="about")
+        section(class="main__sales sales")
+          .sales__container._container
+            .sales__body._body
+              h2(class="sales__title _title",) Хиты продаж
+              ul(class="sales__list")
+                +card('/assets/images/catalog/1.jpg', 'Композиция в сердечке с кустовой розой и эустомой', '70 p.')
+                +card('/assets/images/catalog/2.jpg', 'FlowerBox С белым вином и macaroons', '90 p.')
+                +card('/assets/images/catalog/3.jpg', 'Букет невесты с белыми и нежными кустовыми розами', '110 p.')
+              button(class="sales__btn _btn") Перейти в каталог
       include partials/footer
