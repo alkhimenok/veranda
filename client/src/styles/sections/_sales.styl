@@ -13,11 +13,12 @@
 
 .sales__list
   dflex(center, space-between) 
-  margin 0 0 base * 12 0
   @media screen and (min-width breackpointLGMin)
+    margin 0 0 base * 12 0
     removeMR()
   @media screen and (max-width breackpointSMMax)
     flex-direction column
+    margin 0 0 base * 5 0
     removeMB()
 
 .sales__card 
