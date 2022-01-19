@@ -1,7 +1,28 @@
+mixin card(img, text, price)
+  li(class="basket__card card _line")
+    img(class="card__img _img" src=img alt="card")
+    p(class="card__text _text")!= text
+    .card__count
+      label(class="card__label") +
+        input(class="card__input _input-plus" name="operation" type="radio")
+      input(class="card__input input-value" type="value" value="0")
+      label(class="card__label") -
+        input(class="card__input _input-minus" name="operation" type="radio")
+    button(class="card__btn _btn") Заказать
+
 doctype html
 html(lang="en")
   include partials/head
   body
     .wrapper._screen
       include partials/header
+      main(class="main")
+        section(class="main__basket basket")
+          .basket__container._container
+            .basket__body._body
+              h2(class="basket__title _title") Корзина
+              ul(class="basket__list _list")
+                +card('/assets/images/catalog/1.jpg', 'Композиция в сердечке <br> с кустовой розой и эустомой', '70 p.')
+                +card('/assets/images/catalog/2.jpg', 'FlowerBox <br> С белым вином и macaroons', '90 p.')
+                +card('/assets/images/catalog/3.jpg', 'Букет невесты с белыми и <br> нежными кустовыми розами', '110 p.')
       include partials/footer
