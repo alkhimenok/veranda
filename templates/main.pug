@@ -9,7 +9,7 @@ mixin slide(img, subtitle, text)
 mixin card(img, text, price)
   li(class="sales__card card")
     img(class="card__img _img" src=img alt="card")
-    p(class="card__text _text")= text
+    p(class="card__text _text")!= text
     h3(class="card__price _subtitle")= price
     button(class="card__btn _btn") Заказать
 
@@ -55,8 +55,8 @@ html(lang="en")
             .sales__body._body
               h2(class="sales__title _title",) Хиты продаж
               ul(class="sales__list")
-                +card('/assets/images/catalog/1.jpg', 'Композиция в сердечке с кустовой розой и эустомой', '70 p.')
-                +card('/assets/images/catalog/2.jpg', 'FlowerBox С белым вином и macaroons', '90 p.')
-                +card('/assets/images/catalog/3.jpg', 'Букет невесты с белыми и нежными кустовыми розами', '110 p.')
+                +card('/assets/images/catalog/1.jpg', 'Композиция в сердечке <br> с кустовой розой и эустомой', '70 p.')
+                +card('/assets/images/catalog/2.jpg', 'FlowerBox <br> С белым вином и macaroons', '90 p.')
+                +card('/assets/images/catalog/3.jpg', 'Букет невесты с белыми и <br> нежными кустовыми розами', '110 p.')
               button(class="sales__btn _btn") Перейти в каталог
       include partials/footer
