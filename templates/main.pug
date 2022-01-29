@@ -19,44 +19,44 @@ html(lang="en")
   body
     .wrapper._screen
       include partials/header
-      main(class="main")
-        section(class="main__home home")
-          img(class="home__background" src="/assets/images/home.jpg" alt="home")
-          .home__container._container
-            .home__body._body
-              .home__banner
-                h2(class="home__title _title") Букет для любого случая втвоей жизни
-                h3(class="home__subtitle _subtitle") Онлайн-магазин цветов позволит в несколько кликов выбратьизаказать самую подходящую композицию для&nbsp;любогособытия в вашей жизни.
-                button(class="home__btn _btn") Выбрать
-        section(class="main__blog blog")
-          .blog__container._container
-            .blog__body._body
-              h2(class="blog__title _title") Наш блог
-              .blog__slider
-                button(class="blog__btn _btn-prev")
-                ul(class="blog__list")
-                  +slide('/assets/images/blog/1.jpg', 'Букет без повода. Каким он должен быть?', 'На сегодняшний день мы видим огромное многообразие букетов, глядя на которые, возникает желание забрать их все.')
-                  +slide('/assets/images/blog/2.jpg', '8 Марта - особый день для наших прекрасных дам!', 'У многих в голове  всего один вопрос - обязательно ли в этот день дарить тюльпаны? Если да, то какими они должны быть?')
-                  +slide('/assets/images/blog/1.jpg', 'Букет без повода. Каким он должен быть?', 'На сегодняшний день мы видим огромное многообразие букетов, глядя на которые, возникает желание забрать их все.')
-                  +slide('/assets/images/blog/2.jpg', '8 Марта - особый день для наших прекрасных дам!', 'У многих в голове  всего один вопрос - обязательно ли в этот день дарить тюльпаны? Если да, то какими они должны быть?')
-                button(class="blog__btn _btn-next")
-        section(class="main__about about")
-          .about__container._container
-            .about__body._body
-              .about__banner
-                h2(class="about__title _title") О магазине
-                h3(class="about__subtitle _subtitle") - Мы используем только самые свежие цветы элитных сортов с лучших плантаций.
-                h3(class="about__subtitle _subtitle") - Специальная технология сборки позволяет сохранять естественный микроклимат растений.
-                h3(class="about__subtitle _subtitle") - Мы используем специальный раствор Chrysal, продлевающий жизнь цветов.
-                h3(class="about__subtitle _subtitle") - Мы всегда в курсе самых новейших тенденций во флористике, поэтому ваш букет будет всегда неотразим.
-              img(class="about__img _img" src="/assets/images/about.jpg" alt="about")
-        section(class="main__sales sales")
-          .sales__container._container
-            .sales__body._body
-              h2(class="sales__title _title",) Хиты продаж
-              ul(class="sales__list _list")
-                +card('/assets/images/catalog/1.jpg', 'Композиция в сердечке <br> с кустовой розой и эустомой', '70 p.')
-                +card('/assets/images/catalog/2.jpg', 'FlowerBox <br> С белым вином и macaroons', '90 p.')
-                +card('/assets/images/catalog/3.jpg', 'Букет невесты с белыми и <br> нежными кустовыми розами', '110 p.')
-              button(class="sales__btn _btn") Перейти в каталог
-      include partials/footer
+      //- main(class="main")
+      //-   section(class="main__home home")
+      //-     img(class="home__background" src="/assets/images/home.jpg" alt="home")
+      //-     .home__container._container
+      //-       .home__body._body
+      //-         .home__banner
+      //-           h2(class="home__title _title") Букет для любого случая втвоей жизни
+      //-           h3(class="home__subtitle _subtitle") Онлайн-магазин цветов позволит в несколько кликов выбратьизаказать самую подходящую композицию для&nbsp;любогособытия в вашей жизни.
+      //-           button(class="home__btn _btn") Выбрать
+      //-   section(class="main__blog blog")
+      //-     .blog__container._container
+      //-       .blog__body._body
+      //-         h2(class="blog__title _title") Наш блог
+      //-         .blog__slider
+      //-           button(class="blog__btn _btn-prev")
+      //-           ul(class="blog__list")
+      //-             +slide('/assets/images/blog/1.jpg', 'Букет без повода. Каким он должен быть?', 'На сегодняшний день мы видим огромное многообразие букетов, глядя на которые, возникает желание забрать их все.')
+      //-             +slide('/assets/images/blog/2.jpg', '8 Марта - особый день для наших прекрасных дам!', 'У многих в голове  всего один вопрос - обязательно ли в этот день дарить тюльпаны? Если да, то какими они должны быть?')
+      //-             +slide('/assets/images/blog/1.jpg', 'Букет без повода. Каким он должен быть?', 'На сегодняшний день мы видим огромное многообразие букетов, глядя на которые, возникает желание забрать их все.')
+      //-             +slide('/assets/images/blog/2.jpg', '8 Марта - особый день для наших прекрасных дам!', 'У многих в голове  всего один вопрос - обязательно ли в этот день дарить тюльпаны? Если да, то какими они должны быть?')
+      //-           button(class="blog__btn _btn-next")
+      //-   section(class="main__about about")
+      //-     .about__container._container
+      //-       .about__body._body
+      //-         .about__banner
+      //-           h2(class="about__title _title") О магазине
+      //-           h3(class="about__subtitle _subtitle") - Мы используем только самые свежие цветы элитных сортов с лучших плантаций.
+      //-           h3(class="about__subtitle _subtitle") - Специальная технология сборки позволяет сохранять естественный микроклимат растений.
+      //-           h3(class="about__subtitle _subtitle") - Мы используем специальный раствор Chrysal, продлевающий жизнь цветов.
+      //-           h3(class="about__subtitle _subtitle") - Мы всегда в курсе самых новейших тенденций во флористике, поэтому ваш букет будет всегда неотразим.
+      //-         img(class="about__img _img" src="/assets/images/about.jpg" alt="about")
+      //-   section(class="main__sales sales")
+      //-     .sales__container._container
+      //-       .sales__body._body
+      //-         h2(class="sales__title _title",) Хиты продаж
+      //-         ul(class="sales__list _list")
+      //-           +card('/assets/images/catalog/1.jpg', 'Композиция в сердечке <br> с кустовой розой и эустомой', '70 p.')
+      //-           +card('/assets/images/catalog/2.jpg', 'FlowerBox <br> С белым вином и macaroons', '90 p.')
+      //-           +card('/assets/images/catalog/3.jpg', 'Букет невесты с белыми и <br> нежными кустовыми розами', '110 p.')
+      //-         button(class="sales__btn _btn") Перейти в каталог
+      //- include partials/footer

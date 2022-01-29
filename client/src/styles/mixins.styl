@@ -1,0 +1,42 @@
+$removeMB()
+	& > :last-child
+		margin-bottom 0
+
+$removeMR()
+	& > :last-child
+		margin-right 0
+
+$castomScrol()
+	&::-webkit-scrollbar
+		height calc($base * .4) !important
+		width calc($base * .4) !important
+
+	&::-webkit-scrollbar-track
+		background transparentPrimaryColor
+		border-radius sizeXS
+
+	&::-webkit-scrollbar-thumb
+		background primaryColor
+		border-radius sizeXS
+
+$castomRange()
+	&
+		height sizeXS
+		background-color transparentPrimaryColor
+		border calc(base * .2) solid primaryColor
+		border-radius sizeXS
+		cursor e-resize
+		-webkit-appearance none
+
+	&::-webkit-slider-thumb
+		// @include size(15, 15)
+		background-color primaryColor
+		border-radius 50%
+		-webkit-appearance none
+
+$flex($align-items = center, $justify-content = center, $flex-direction = row, $flex-wrap = nowrap)
+	display flex
+	align-items $align-items
+	justify-content $justify-content
+	flex-direction $flex-direction
+	flex-wrap $flex-wrap

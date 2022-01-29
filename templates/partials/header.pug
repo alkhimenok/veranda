@@ -1,3 +1,5 @@
+- var linkList = ['главная', 'каталог']
+
 header(class="header" id="header")
   .header__container._container
     .header__body._body
@@ -5,12 +7,11 @@ header(class="header" id="header")
       .header__menu
         nav(class="header__nav")
           ul(class="header__list")
-            li(class="header__item")
-              a(class="header__link" href="/") главная
-            li(class="header__item")
-              a(class="header__link" href="/catalog") Каталог
+            each link in linkList
+              li(class="header__item")
+                a(class="header__link" href="/")= link
         a(class="header__basket" href="/basket")
-          spna(class="header__icon _icon-basket")
+          span(class="header__icon _icon-basket")
           span(class="header__label") 0.00
       div(class="header__burger" id="burgerIcon")
         span(class="header__line")

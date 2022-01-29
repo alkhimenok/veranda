@@ -1,82 +1,89 @@
-.blog 
+.blog
   padding: base * 13 0
 
-// .blog__container 
-//   &._container 
+// .blog__container
+// &._container
 
 // .blog__body
-//   &._body 
-
+// &._body
 .blog__title
-  margin 0 0 base * 7 0 
-//   &._title 
+  margin 0 0 base * 7 0
 
-.blog__btn 
-  dflex(center,center)  
-  height base * 35
+// &._title
+.blog__btn
+  dflex(center, center)
+  height: base * 35
   background-color dangerColor
-  border-radius base * 1
+  border-radius: base * 1
   border-color primaryColor
   transition delay
+
   &:hover
     background-color transparentPrimaryColor
+
   &::before
-    content ''
-    width base * 2
-    height base * 2
+    content ""
+    width: base * 2
+    height: base * 2
     transform rotate(45deg)
+
   &._btn-prev
     padding 0 sizeXS 0 sizeMD
+
     &::before
       border-left border
       border-bottom border
-  &._btn-next 
+
+  &._btn-next
     padding 0 sizeMD 0 sizeXS
+
     &::before
       border-top border
       border-right border
 
-.blog__slider 
-  dflex(center, space-between) 
+.blog__slider
+  dflex(center, space-between)
 
 .blog__list
-  dflex(center, space-between) 
+  dflex(center, space-between)
   overflow hidden
   max-width 90%
 
-.blog__slide 
+.blog__slide
   min-width: base * 55
   height: base * 35
   margin 0 sizeXL
   dflex(center, flex-start)
   background-color dangerColor
   border-radius sizeXS
+
   @media screen and (max-width breackpointSMMax)
     min-width 95%
     margin 0 sizeXS
 
-
-.blog__img 
+.blog__img
   padding 0
+
   @media screen and (max-width breackpointSMMax)
     width 40%
-//   &._img 
 
-.blog__article 
+// &._img
+.blog__article
   padding sizeLG
 
-.blog__subtitle 
-  margin 0 0 sizeLG 0
-//   &._subtitle 
+.blog__subtitle
+  margin 0 0 sizeLG
 
-.blog__text 
-  margin 0 0 sizeMD 0
+// &._subtitle
+.blog__text
+  margin 0 0 sizeMD
   color secondaryColor
-//   &._text 
 
-.blog__link 
+// &._text
+.blog__link
   border-bottom border primaryColor
   transition delay
   cursor pointer
+
   &:hover
     color secondaryColor

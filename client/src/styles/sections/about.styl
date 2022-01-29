@@ -1,36 +1,39 @@
-.about 
+.about
   background-color dangerColor
-  padding base * 8 0
+  padding: base * 8 0
+  // .about__container
+  // &._container
 
-// .about__container 
-  // &._container 
-
-.about__body 
+.about__body
   dflex(center, space-between)
+
   @media screen and (max-width breackpointSMMax)
     flex-direction column
     text-align center
-  // &._body 
+    // &._body
 
-.about__banner 
+.about__banner
   removeMB()
+
   @media screen and (min-width breackpointMDMin)
-    margin 0 base * 5 0 0 
+    margin 0 base * 5 0 0
     width 50%
+
   @media screen and (max-width breackpointSMMax)
     margin 0 0 base * 5 0
 
 .about__title
   margin 0 0 base * 7 0
-  // &._title 
+  // &._title
 
-.about__subtitle 
+.about__subtitle
   margin 0 0 base * 3 0
   color secondaryColor
-  // &._subtitle 
+  // &._subtitle
 
-.about__img 
+.about__img
   @media screen and (min-width breackpointMDMin)
     width 40%
+
   @media screen and (max-width breackpointSMMax)
     width 90%
