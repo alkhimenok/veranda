@@ -6,6 +6,9 @@
     opacity 0.4
     &:hover
       opacity 1
+  &._show-menu
+    .header__menu
+      right 0
   &__container
     // &._container
   &__body
@@ -15,25 +18,54 @@
     flex 1
     // &._logo
   &__menu
-    flex auto
-    $flex(center, space-between)
+    @media screen and (min-width $breackpointSMMin)
+      flex auto
+      $flex(center, space-between)
+    @media screen and (max-width $breackpointXSMax)
+      position fixed
+      top 0
+      right -100%
+      z-index 2
+      width 100%
+      height 100%
+      $flex(center, center, column)
+      background-color $transparentSecondaryColor
+      transition $delay
   &__nav
-    margin 0 0 0 $sizeXL
+    @media screen and (min-width $breackpointSMMin)
+      margin 0 0 0 $sizeXL
+    @media screen and (max-width $breackpointXSMax)
+      margin 0 0 $sizeXXL
   &__list
-    $flex(center, center)
-    $removeMR()
+    @media screen and (min-width $breackpointSMMin)
+      $flex(center, center)
+      sizeLG$removeMR()
+    @media screen and (max-width $breackpointXSMax)
+      $removeMB()
   &__item
-    margin 0 $sizeSM 0 0
+    @media screen and (min-width $breackpointSMMin)
+      margin 0 $sizeSM 0 0
+    @media screen and (max-width $breackpointXSMax)
+      margin 0 0 $sizeLG
   &__link
     padding $sizeXS $sizeSM
+    transition $delay
     .header__icon
       opacity 0
     @media screen and (hover hover)
-      &:hover
-        .header__icon
-          opacity 1
+      &:not(._current)
+        &:hover
+          .header__icon
+            opacity 1
+    &._current
+      .header__text
+        border-color $thirdColor
   &__text
-    font-size $sizeLG
+    border-bottom $thinBorder transparent
+    @media screen and (min-width $breackpointSMMin)
+      font-size $sizeLG
+    @media screen and (max-width $breackpointXSMax)
+      font-size $sizeXL
     text-transform capitalize
   &__basket
     $flex()
@@ -45,9 +77,12 @@
   &__icon
     transition $delay
     &._icon-flower
-      padding 0 $sizeXS 0 0
-      font-size $sizeMD
-      color $transparentThirdColor
+      @media screen and (min-width $breackpointSMMin)
+        padding 0 $sizeXS 0 0
+        font-size $sizeMD
+        color $transparentThirdColor
+      @media screen and (max-width $breackpointXSMax)
+        display none
     &._icon-basket
       margin 0 $sizeMD 0 0
       font-size $sizeXL

@@ -1,4 +1,4 @@
-- var linkList = [{content: 'главная', href: '/'}, {content: 'каталог', href: '/catalog'}]
+- var linkList = [{content: 'главная', href: '/', isCurrent: true}, {content: 'каталог', href: '/catalog', isCurrent: false}]
 
 header(class="header" id="header")
   .header__container._container
@@ -10,7 +10,7 @@ header(class="header" id="header")
           ul(class="header__list")
             each link in linkList
               li(class="header__item")
-                a(class="header__link" href=link.href)
+                a(class=link.isCurrent ? "header__link _current" : "header__link" href=link.href)
                   i(class="header__icon _icon-flower")
                   span(class='header__text')= link.content
         a(class="header__basket" href="/basket")
