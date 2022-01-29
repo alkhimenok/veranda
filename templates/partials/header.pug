@@ -1,17 +1,20 @@
-- var linkList = ['главная', 'каталог']
+- var linkList = [{content: 'главная', href: '/'}, {content: 'каталог', href: '/catalog'}]
 
 header(class="header" id="header")
   .header__container._container
     .header__body._body
-      a(class="header__logo _logo" href="#") веранда
+      p(class="header__logo")
+        a(class="logo__text _logo" href="#") веранда
       .header__menu
         nav(class="header__nav")
           ul(class="header__list")
             each link in linkList
               li(class="header__item")
-                a(class="header__link" href="/")= link
+                a(class="header__link" href=link.href)
+                  i(class="header__icon _icon-flower")
+                  span(class='header__text')= link.content
         a(class="header__basket" href="/basket")
-          span(class="header__icon _icon-basket")
+          i(class="header__icon _icon-basket")
           span(class="header__label") 0.00
-      div(class="header__burger" id="burgerIcon")
-        span(class="header__line")
+      div(class="header__burger burger" id="burgerIcon")
+        span(class="burger__line")

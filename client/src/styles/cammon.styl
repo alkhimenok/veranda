@@ -17,8 +17,12 @@
   font-family $thirdFont
   font-size $sizeXXL
   text-transform capitalize
+  transition $delay
   user-select none
   cursor pointer
+
+  &:hover
+    color $thirdColor
 
 ._title
   font-family $secondaryFont
@@ -50,13 +54,15 @@
   transition $delay
   cursor pointer
 
-  &:hover
-    color $secondaryColor
-    background-color $thirdColor
-    border-color $thirdColor
+  @media screen and (hover hover)
+    &:hover
+      color $secondaryColor
+      background-color $thirdColor
+      border-color $thirdColor
 
 ._img
   width 100%
   height 100%
   object-fit cover
   object-position center
+  

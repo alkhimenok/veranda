@@ -1,133 +1,58 @@
 .header
-  position: fixed
-  top 0
-  left 0
-  z-index: 2
-  padding sizeXXL 0
-  background-color dangerColor
-  border-bottom: base * 1.5 solid secondaryColor
-  @media screen and (max-width breackpointXSMax) 
-    &._show-menu
-      .header__menu
-        right 0
-      .header__burger
-        .header__line
-          top 50%
-          transform scale(0)
-        &::before
-          top 43%
-          transform rotate(45deg)
-          background-color errorColor
-        &::after
-          bottom 43%
-          transform rotate(-45deg)
-          background-color errorColor
-
-// .header__container 
-//   &._container
-
-.header__body
-  width: 100%
-  dflex(center, space-between)
-  // &._body
-
-.header__logo
-  flex 0 0 33.333%
-  padding 0 0 sizeSM 0
-  // &._logo
-
-.header__menu
-  @media screen and (min-width breackpointXSMax) 
-    flex 0 0 66.666%
-    dflex(center, space-between)
-  @media screen and (max-width breackpointXSMax)
-    dflex(center, center, column)
-    position fixed
-    top 0
-    right -100%
-    width 100%
-    height: 100vh
-    background-color dangerColor
-    transition delay
-
-.header__nav
-  @media screen and (min-width breackpointXSMax) 
-    background-color transparentDefaultColor
-    border-radius base * 1
-
-.header__list
-  @media screen and (min-width breackpointXSMax) 
-    dflex(center, center)
-  @media screen and (max-width breackpointXSMax) 
-    text-align center
-    margin 0 0 sizeXL 0
-
-.header__item
-  cursor pointer
-
-.header__link
-  display inline-block
-  padding sizeXS
-  font-size sizeMD
-  text-transform capitalize
-  border-bottom border transparent
-  transition delay
-  &:hover
-    border-bottom border primaryColor
-
-.header__basket 
-  dflex(center, center)
-  font-size sizeLG
-  cursor pointer
-  &:hover
-    .header__icon
-      padding sizeXS 0 sizeXS sizeMD
-
-.header__icon
-  padding sizeXS
-  transition delay
-  // &._icon-basket
-
-.header__label
-  padding sizeXS sizeMD 
-  background-color transparentDefaultColor
-  border-radius base * 1
-
-.header__burger
-  position: relative
-  width base * 2.5
-  height base * 2
-  background-color transparent
-  cursor pointer
-  .header__line,
-  &::before,
-  &::after
-    content ""
-    position absolute
-    left 0
-    width 100%
-    height base * 0.3
-    display block
-    background-color primaryColor
-    transition delay
-    user-select none
-  .header__line
-    top 50%
-    transform translate(0, -50%)
-  &::before
-    top 0
-  &::after 
-    bottom 0
-  @media screen and (hover: hover) 
+  padding $sizeLG 0
+  background-color $lightSecondaryColor
+  opacity 0.4
+  transition $delay
+  @media screen and (hover hover)
     &:hover
-      .burger-icon__line,
-      &::before,
-      &::after
-        background-color secondaryColor
-  &:active
-    .header__line,
-    &::before,
-    &::after
-      background-color secondaryColor
-  @media screen and (min-width breackpointXSMax) 
-    display: none
+      opacity 1
+  &__container
+    // &._container
+  &__body
+    $flex(center, space-between)
+    // &._body
+  &__logo
+    flex 1
+    // &._logo
+  &__menu
+    flex auto
+    $flex(center, space-between)
+  // &__nav
+  &__list
+    $flex(center, center)
+    $removeMR()
+  &__item
+    margin 0 $sizeSM 0 0
+  &__link
+    padding $sizeXS $sizeSM
+    .header__icon
+      opacity 0
+    @media screen and (hover hover)
+      &:hover
+        .header__icon
+          opacity 1
+  &__text
+    font-size $sizeLG
+    text-transform capitalize
+  &__basket
+    $flex()
+    @media screen and (hover hover)
+      &:hover
+        color $thirdColor
+        .header__icon
+          margin 0 $sizeXS 0 $sizeSM
+  &__icon
+    transition $delay
+    &._icon-flower
+      padding 0 $sizeXS 0 0
+      font-size $sizeMD
+      color $thirdColor
+    &._icon-basket
+      margin 0 $sizeMD 0 0
+      font-size $sizeXL
+  &__label
+    font-size $sizeLG
+    transition $delay
+  &__burger
+    @media screen and (min-width $breackpointXSMax)
+      display none

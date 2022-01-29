@@ -46,15 +46,17 @@
   margin 0 0 sizeXS 0
   font-size sizeMD
   color defaultColor
-  border-bottom border transparent
+  border-bottom border $transparent
   transition delay
-  &:hover
-    border-color defaultColor
+  @media screen and (hover hover)
+    &:hover
+      border-color defaultColor
 
 .footer__btn 
   color defaultColor
   border-color defaultColor
-  &:hover
-    color primaryColor
-    background-color defaultColor
+  @media screen and (hover hover)
+    &:hover
+      color primaryColor
+      background-color defaultColor
 //   &._btn 
