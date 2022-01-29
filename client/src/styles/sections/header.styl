@@ -1,4 +1,8 @@
 .header
+  position fixed
+  top 0
+  left 0
+  z-index 2
   $indent()
   background-color $transparentSecondaryColor
   transition $delay
@@ -25,7 +29,7 @@
       position fixed
       top 0
       right -100%
-      z-index 2
+      z-index 3
       width 100%
       height 100%
       $flex(center, center, column)
@@ -84,7 +88,7 @@
     &._icon-flower
       @media screen and (min-width $breackpointSMMin)
         font-size $sizeMD
-        color $transparentThirdColor
+        color $thirdColor
       @media screen and (max-width $breackpointXSMax)
         display none
     &._icon-basket
