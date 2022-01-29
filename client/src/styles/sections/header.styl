@@ -38,18 +38,16 @@
       margin 0 0 $sizeXXL
   &__list
     @media screen and (min-width $breackpointSMMin)
-      $flex(center, center)
-      sizeLG$removeMR()
+      $flex()
+      $removeMR()
     @media screen and (max-width $breackpointXSMax)
       $removeMB()
   &__item
     @media screen and (min-width $breackpointSMMin)
-      margin 0 $sizeSM 0 0
+      margin 0 $sizeMD 0 0
     @media screen and (max-width $breackpointXSMax)
       margin 0 0 $sizeLG
   &__link
-    padding $sizeXS $sizeSM
-    transition $delay
     .header__icon
       opacity 0
     @media screen and (hover hover)
@@ -57,11 +55,16 @@
         &:hover
           .header__icon
             opacity 1
+    &:active
+      .header__text
+        color $transparentThirdColor
     &._current
       .header__text
         border-color $thirdColor
   &__text
+    padding $sizeXS
     border-bottom $thinBorder transparent
+    transition $delay
     @media screen and (min-width $breackpointSMMin)
       font-size $sizeLG
     @media screen and (max-width $breackpointXSMax)
@@ -74,11 +77,12 @@
         color $transparentThirdColor
         .header__icon
           margin 0 $sizeXS 0 $sizeSM
+    &:active
+      color $thirdColor
   &__icon
     transition $delay
     &._icon-flower
       @media screen and (min-width $breackpointSMMin)
-        padding 0 $sizeXS 0 0
         font-size $sizeMD
         color $transparentThirdColor
       @media screen and (max-width $breackpointXSMax)
