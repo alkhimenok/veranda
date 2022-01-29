@@ -1,9 +1,9 @@
 .header
-  padding $sizeLG 0
-  background-color $lightSecondaryColor
-  opacity 0.4
+  $indent()
+  background-color $transparentSecondaryColor
   transition $delay
   @media screen and (hover hover)
+    opacity 0.4
     &:hover
       opacity 1
   &__container
@@ -17,7 +17,8 @@
   &__menu
     flex auto
     $flex(center, space-between)
-  // &__nav
+  &__nav
+    margin 0 0 0 $sizeXL
   &__list
     $flex(center, center)
     $removeMR()
@@ -38,7 +39,7 @@
     $flex()
     @media screen and (hover hover)
       &:hover
-        color $thirdColor
+        color $transparentThirdColor
         .header__icon
           margin 0 $sizeXS 0 $sizeSM
   &__icon
@@ -46,7 +47,7 @@
     &._icon-flower
       padding 0 $sizeXS 0 0
       font-size $sizeMD
-      color $thirdColor
+      color $transparentThirdColor
     &._icon-basket
       margin 0 $sizeMD 0 0
       font-size $sizeXL

@@ -1,62 +1,48 @@
 .footer
-  padding sizeLG 0
-  background-color secondaryColor
-
-// .footer__container
-//   &._container
-
-.footer__body 
-  @media screen and (min-width breackpointXLMin) 
-    dflex(center, space-between)
-  @media screen and (max-width breackpointLGMax)
-    dflex(center, center, column)
-    text-align: center
-    removeMB()
-    & > * 
-      margin 0 0 sizeXL 0
-  // &._body
-
-.footer__logo 
-  color defaultColor
-  // &._logo 
-
-.footer__address
-  color defaultColor
-  line-height 170%
-
-.footer__payment 
-  color defaultColor
-
-.footer__subtitle 
-  margin 0 0 sizeXS 0
-
-.footer__list
-  removeMR()
-
-.footer__card
-  margin 0 sizeLG 0 0
-  font-size sizeLG 
-//  &._icon-mastercard 
-//  &._icon-visa
-
-.footer__call 
-  dflex(center, center, column)
-
-.footer__phone
-  margin 0 0 sizeXS 0
-  font-size sizeMD
-  color defaultColor
-  border-bottom border $transparent
-  transition delay
-  @media screen and (hover hover)
-    &:hover
-      border-color defaultColor
-
-.footer__btn 
-  color defaultColor
-  border-color defaultColor
-  @media screen and (hover hover)
-    &:hover
-      color primaryColor
-      background-color defaultColor
-//   &._btn 
+  $indent()
+  background-color $thirdColor
+  &__body
+    // &._body
+    @media screen and (min-width $breackpointXLMin)
+      $flex(center, space-between)
+    @media screen and (max-width $breackpointLGMax)
+      text-align center
+      $flex(center, center, column)
+      $removeMB()
+      & > *
+        margin 0 0 $sizeXL
+  &__logo
+    color $secondaryColor
+    // &._logo
+  &__address
+    line-height 1.6
+    color $secondaryColor
+    // &._text
+  // &__payment
+  &__subtitle
+    padding 0 0 $sizeSM
+    color $secondaryColor
+  // &._text
+  &__list
+    $flex(center, space-between)
+  // &__card
+  &__icon
+    color $secondaryColor
+    font-size $sizeLG
+    // &._icon-master
+    // &._icon-visa
+  &__call
+    $flex(center, center, column)
+  &__phone
+    margin 0 0 $sizeSM
+    font-size $sizeLG
+    color $secondaryColor
+    border-bottom $thinBorder transparent
+    transition $delay
+    @media screen and (hover hover)
+      &:hover
+        border-color $secondaryColor
+  &__btn
+    color $secondaryColor
+    border-color $secondaryColor
+    // &._btn
