@@ -1,15 +1,20 @@
-// .basket 
-
-// .basket__container 
-//   // &._container 
-
-// .basket__body 
-//   // &._body 
-
-// .basket__title 
-//   // &._title 
-
-// .basket__list 
-//   // &._list 
-
-// .basket__card 
+.basket 
+  margin $base * 13 0 0 0
+  $bigIndent()
+  // &__container 
+    // &._container 
+  // &__body 
+    // &._body 
+  &__title 
+    text-align: center
+    // &._title 
+  &__list 
+    margin 0 0 $sizeXL
+    $removeMB()
+  &__card 
+    margin 0 0 $sizeLG
+  &__btn
+    display block
+    margin 0 auto
+    padding $sizeLG $sizeXL
+    // &._btn

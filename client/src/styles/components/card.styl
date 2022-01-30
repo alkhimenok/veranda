@@ -1,5 +1,70 @@
 .card
-  // &._line
+  &._line
+    $flex(center, space-around)
+    .card__img
+      width 30%
+      // &._img
+    .card__text
+      text-align center
+      // &._text
+    .card__price
+      // &._subtitle
+    .card__count
+      @media screen and (min-width $breackpointMDMin)
+        $flex()
+      @media screen and (max-width $breackpointSMMax)
+        $flex(center, center, column)
+    .card__btn
+      position relative
+      width $sizeXL
+      height $sizeXL
+      font-size $sizeXL
+      border-radius $borderRadiusCircle
+      transition $delay
+      cursor pointer
+      // &._btn
+      &._btn-plus
+        &::after
+          width 10%
+          height 100%
+      &._btn-minus
+        &::after
+          display none
+      &::after,&::before
+        content ''
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        background-color $thirdColor
+        transition $delay
+      &::before
+        width 100%
+        height 10%
+      @media screen and (hover hover)
+        &:hover
+          &::before,&::after
+            background-color $transparentThirdColor
+      &:active
+        &::before
+          &::after
+            background-color $secondaryColor
+        background-color $transparentPrimaryColor
+    .card__input
+      padding $sizeXS
+      max-width $sizeXXL
+      font-size $sizeXL
+      text-align center
+      background-color transparent
+      border $thinBorder $thirdColor
+      border-radius $borderRadiusSuperellipse
+      outline none
+      cursor default
+      @media screen and (min-width $breackpointMDMin)
+        margin 0 $sizeLG
+      @media screen and (max-width $breackpointSMMax)
+        margin $sizeLG 0
+      // &._input-value
   &:not(._line)
     text-align center
     .card__img
@@ -14,3 +79,7 @@
     .card__btn
       width 60%
       // &._btn
+      // &._btn-plus
+      // &._btn-minus
+    .card__input
+      // &._input-value
