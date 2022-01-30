@@ -3,11 +3,14 @@ mixin card(img, text, price)
     img(class="card__img _img" src=img alt="card")
     p(class="card__text _text")!= text
     .card__count
-      label(class="card__label") +
-        input(class="card__input _input-plus" name="operation" type="radio")
-      input(class="card__input input-value" type="value" value="0")
-      label(class="card__label") -
-        input(class="card__input _input-minus" name="operation" type="radio")
+      button(class="card__btn _btn-plus") +
+      import(class="card__input _input-value" value="1")
+      button(class="card__btn _btn-minus") -
+    //-   label(class="card__label") +
+    //-     input(class="card__input _input-plus" name="operation" type="radio")
+    //-   input(class="card__input input-value" type="value" value="0")
+    //-   label(class="card__label") -
+    //-     input(class="card__input _input-minus" name="operation" type="radio")
     button(class="card__btn _btn") Заказать
 
 doctype html

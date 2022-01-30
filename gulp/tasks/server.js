@@ -6,7 +6,7 @@ module.exports = done => {
 	browserSync.init({
 		server: {
 			baseDir: folders.distFolder,
-			index: 'main.html'
+			index: 'basket.html'
 		},
 		notify: false,
 		port: 5000
