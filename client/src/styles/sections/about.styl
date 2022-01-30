@@ -1,39 +1,28 @@
 .about
-  background-color dangerColor
-  padding: base * 8 0
-  // .about__container
-  // &._container
-
-.about__body
-  dflex(center, space-between)
-
-  @media screen and (max-width breackpointSMMax)
-    flex-direction column
-    text-align center
-    // &._body
-
-.about__banner
-  removeMB()
-
-  @media screen and (min-width breackpointMDMin)
-    margin 0 base * 5 0 0
-    width 50%
-
-  @media screen and (max-width breackpointSMMax)
-    margin 0 0 base * 5 0
-
-.about__title
-  margin 0 0 base * 7 0
-  // &._title
-
-.about__subtitle
-  margin 0 0 base * 3 0
-  color secondaryColor
-  // &._subtitle
-
-.about__img
-  @media screen and (min-width breackpointMDMin)
-    width 40%
-
-  @media screen and (max-width breackpointSMMax)
-    width 90%
+  $bigIndent()
+  background-color $transparentPrimaryColor
+  &__container
+    // &._container
+  &__body
+    @media screen and (min-width $breackpointLGMin)
+      $flex(center, space-between)
+    @media screen and (max-width $breackpointMDMax)
+      $flex(flex-start, center, column)
+  &__banner
+    @media screen and (min-width $breackpointLGMin)
+      flex 50%
+      margin 0 $sizeXXL 0 0
+    @media screen and (max-width $breackpointMDMax)
+      margin 0 0 $sizeXXL
+  &__title
+    // &._title
+  &__subtitle
+    margin 0 0 $sizeLG
+    // &._subtitle
+  &__img
+    // &._img
+    @media screen and (min-width $breackpointLGMin)
+      flex 50%
+    @media screen and (max-width $breackpointMDMax)
+      width 80%
+      margin 0 auto
