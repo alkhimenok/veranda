@@ -1,23 +1,18 @@
 .sales
-  padding base * 8 0 
-
-// .sales__container 
-  // &._container 
-
-// .sales__body 
-  // &._body 
-
-.sales__title 
-  margin 0 0 base * 6 0
-  // &._title 
-
-.sales__list
-  // &._list
-
-.sales__card 
-  margin 0 base * 1 base * 12 base * 1
-
-.sales__btn 
-  display block
-  margin 0 auto
-  // &._btn 
+  $bigIndent()
+  &__container
+    // &._container
+  &__body
+    // &._body
+  &__title
+    // &._title
+  &__list
+    $flex(center, center, row, wrap)
+    margin 0 0 $sizeXL
+  &__card
+    margin $sizeXL $sizeSM
+  &__btn
+    display block
+    margin 0 auto
+    padding $sizeLG $sizeXL
+    // &._btn
