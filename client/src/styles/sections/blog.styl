@@ -1,73 +1,111 @@
 .blog
-  padding: base * 13 0
-// .blog__container
-// &._container
-
-// .blog__body
-// &._body
-.blog__title
-  margin 0 0 base * 7 0
-// &._title
-.blog__btn
-  dflex(center, center)
-  height: base * 35
-  background-color dangerColor
-  border-radius: base * 1
-  border-color primaryColor
-  transition delay
-  @media screen and (hover hover)
-    &:hover
-      background-color transparentPrimaryColor
-  // &&:active
-  &::before
-    content ''
-    width: base * 2
-    height: base * 2
-    transform rotate(45deg)
-  &._btn-prev
-    padding 0 sizeXS 0 sizeMD
+  $bigIndent()
+  &__slider
+    position relative
+  &__btn
+    position absolute
+    top 0
+    bottom 0
+    z-index 1
+    width $sizeXL
+    background-color $transparentThirdColor
+    border-radius $borderRadiusOval
+    transition $delay
+    cursor pointer
+    @media screen and (hover hover)
+      &:hover
+        background-color $transparentPrimaryColor
+    &:active
+      background-color transparent
+      &::before
+        border-right $thinBorder $transparentPrimaryColor
+        border-top $thinBorder $transparentPrimaryColor
     &::before
-      border-left border
-      border-bottom border
-  &._btn-next
-    padding 0 sizeMD 0 sizeXS
+      content ''
+      position absolute
+      top 50%
+      transform translate(-50%, -50%)
+      width $sizeXS
+      height $sizeXS
+      border-right $thinBorder $secondaryColor
+      border-top $thinBorder $secondaryColor
+      transition $delay
+    &._btn-prev
+      left 0
+      &::before
+        left 50%
+        transform rotate(-135deg)
+    &._btn-next
+      right $sizeSM
+      &::before
+        left 40%
+        transform rotate(45deg)
+  &__list
+    position relative
+    $flex(center, flex-start)
+    overflow auto
+  &__slide
+    $flex()
+    background-color $thirdColor
+    border-radius $borderRadiusSuperellipse
+    @media screen and (min-width $breackpointXLMin)
+      width 33%
+      min-width 33%
+      margin 0 ((100% - (33% * 2)) / 4)
+    @media screen and (max-width $breackpointLGMax)
+      width 80%
+      min-width 80%
+      margin 0 10%
+  &__img
+    // &._img
+    @media screen and (max-width $breackpointLGMax)
+      width 50%
+  &__article
+    padding $sizeSM
+    @media screen and (max-width $breackpointLGMax)
+      width 50%
+  &__subtitle
+    margin 0 0 $sizeMD
+    color $secondaryColor
+    // &._subtitle
+  &__text
+    margin 0 0 $sizeXL
+    color $secondaryColor
+    // &._text
+  &__link
+    position relative
+    display inline-block
+    padding $sizeXS 0
+    color $secondaryColor
+    transition $delay
+    // &._text
+    &::after
+      content ''
+      position absolute
+      left 110%
+      bottom: $base * 0.9
+      width $sizeXS
+      height $sizeXS
+      border-right $thinBorder $secondaryColor
+      border-top $thinBorder $secondaryColor
+      transform rotate(45deg)
+      transition $delay
     &::before
-      border-top border
-      border-right border
-.blog__slider
-  dflex(center, space-between)
-.blog__list
-  dflex(center, space-between)
-  overflow hidden
-  max-width 90%
-.blog__slide
-  min-width: base * 55
-  height: base * 35
-  margin 0 sizeXL
-  dflex(center, flex-start)
-  background-color dangerColor
-  border-radius sizeXS
-  @media screen and (max-width breackpointSMMax)
-    min-width 95%
-    margin 0 sizeXS
-.blog__img
-  padding 0
-  @media screen and (max-width breackpointSMMax)
-    width 40%
-// &._img
-.blog__article
-  padding sizeLG
-.blog__subtitle
-  margin 0 0 sizeLG
-// &._subtitle
-.blog__text
-  margin 0 0 sizeMD
-  color secondaryColor
-// &._text
-.blog__link
-  border-bottom border primaryColor
-  transition delay
-  cursor pointer
-  @media screen and (hover hover)
-    &:hover
-      color secondaryColor
+      content ''
+      position absolute
+      bottom 0
+      left 0
+      width 100%
+      height: $base * 0.2
+      transition $delay
+    @media screen and (hover hover)
+      &:hover
+        &::before
+          background-color $transparentSecondaryColor
+        &::after
+          left 105%
+    &:active
+      &::before
+        background-color $transparentThirdColor
+      &::after
+        border-color $transparentThirdColor
