@@ -19,7 +19,7 @@ module.exports = {
 		assets: `${srcFolder}/assets/**/*.*`,
 		templates: `${templatesFolder}/**/*.pug`,
 		styles: `${srcFolder}/**/*.styl`,
-		scripts: `${srcFolder}/**/*.ts`
+		scripts: `${srcFolder}/**/*.js`
 	},
 	clean: distFolder,
 	distFolder,

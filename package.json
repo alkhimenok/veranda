@@ -9,7 +9,10 @@
 		"start": "node app.js",
 		"server": "nodemon app.js",
 		"dev": "cross-env NODE_ENV=development concurrently \"gulp dev\" \"npm run server\"",
-		"prod": "cross-env NODE_ENV=production concurrently \"gulp prod\" \"npm run start\""
+		"prod": "cross-env NODE_ENV=production concurrently \"gulp prod\" \"npm run start\"",
+		"format": "npx prettier --write .",
+		"lint": "npx eslint --ignore-path .gitignore .",
+		"lint:fix": "npx eslint --ignore-path .gitignore . --fix"
 	},
 	"browserslist": "> 0.25%, not dead",
 	"repository": {
@@ -28,6 +31,9 @@
 		"concurrently": "^7.0.0",
 		"cross-env": "^7.0.3",
 		"del": "^6.0.0",
+		"eslint": "^8.9.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-csso": "^4.0.1",
@@ -36,6 +42,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-stylus": "^2.7.1",
 		"nodemon": "^2.0.15",
+		"prettier": "2.5.1",
 		"stylus": "^0.56.0",
 		"webpack-stream": "^7.0.0"
 	},

@@ -2,11 +2,11 @@ const browserSync = require('browser-sync')
 
 const folders = require('../config/folders')
 
-module.exports = done => {
+module.exports = () => {
 	browserSync.init({
 		server: {
 			baseDir: folders.distFolder,
-			index: 'basket.html'
+			index: 'main.html'
 		},
 		notify: false,
 		port: 5000

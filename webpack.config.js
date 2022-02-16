@@ -19,5 +19,8 @@ module.exports = {
 		]
 	},
 	resolve: { extensions: ['.js'] },
-	output: { path: path.resolve(__dirname, 'client', 'dist'), filename: 'index.js', }
+	output: {
+		path: path.resolve(__dirname, 'client', 'dist'),
+		filename: 'index.js'
+	}
 }

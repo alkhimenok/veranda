@@ -1,7 +1,7 @@
 const gulp = require('gulp')
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('../../webpack.config.js');
+const webpack = require('webpack')
+const webpackStream = require('webpack-stream')
+const webpackConfig = require('../../webpack.config.js')
 const browserSync = require('browser-sync')
 
 const folders = require('../config/folders')

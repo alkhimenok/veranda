@@ -15,9 +15,18 @@ const watcher = () => {
 	gulp.watch(folders.watch.styles, styles)
 	gulp.watch(folders.watch.scripts, scripts)
 }
+// prettier-ignore
+const build = gulp.series(
+	clean,
+	gulp.parallel(assets, templates, styles, scripts)
+)
+// prettier-ignore
+const watch = gulp.series(
+	clean,
+	gulp.parallel(assets, templates, styles, scripts),
+	gulp.parallel(watcher, server)
+)
 
-const build = gulp.series(clean, gulp.parallel(assets, templates, styles, scripts))
-const watch = gulp.series(clean, gulp.parallel(assets, templates, styles, scripts), gulp.parallel(watcher, server))
 const dev = gulp.series(clean, gulp.parallel(assets, styles, scripts), watcher)
 const prod = gulp.series(clean, gulp.parallel(assets, styles, scripts))
 
