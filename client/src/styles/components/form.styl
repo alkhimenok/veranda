@@ -1,0 +1,36 @@
+.form
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 6
+  $flex()
+  background-color $transparentPrimaryColor
+  opacity 0
+  transition $delay
+  &._show
+    opacity 1
+  &__wrapper
+    $flex(flex-start, center, column)
+    padding $sizeXXL $sizeMD
+    background-color $secondaryColor
+    border-radius $borderRadiusSuperellipse
+    @media screen and (min-width $breackpointMDMin)
+      width 50%
+    @media screen and (max-width $breackpointSMMax)
+      width: 70%
+  &__input
+    width 100%
+    font-size $sizeMD
+    padding $sizeMD
+    margin 0 0 $sizeMD 0
+    color $thinBorder $thirdColor
+    border-radius $borderRadiusSuperellipse
+    border $thinBorder $thirdColor
+    &._textarea
+      resize vertical
+      max-height 300px
+  &__btn
+    padding $sizeSM $sizeXL
+    color $thirdColor

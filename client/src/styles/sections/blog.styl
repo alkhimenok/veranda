@@ -2,6 +2,7 @@
   $bigIndent()
   &__slider
     position relative
+    overflow hidden
   &__btn
     position absolute
     top 0
@@ -43,7 +44,7 @@
   &__list
     position relative
     $flex(center, flex-start)
-    overflow auto
+    transition $delay
   &__slide
     $flex()
     background-color $thirdColor

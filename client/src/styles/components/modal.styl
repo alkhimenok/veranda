@@ -1,0 +1,30 @@
+.modal
+  position fixed
+  left 50%
+  top -100%
+  transform translate(-50%, 0)
+  z-index 5
+  padding $sizeLG
+  text-align center
+  background-color $transparentThirdColor
+  border-radius $borderRadiusSuperellipse
+  transition $longDelay
+  @media screen and (min-width $breackpointSMMin)
+    width 500px
+  @media screen and (max-width $breackpointXSMax)
+    width 90%
+  &._show
+    top 5%
+  &__title
+    margin 0 0 $sizeLG 0
+    font-size $sizeXL
+    color $secondaryColor
+  &__link
+    font-size $sizeMD
+    padding $sizeXS $sizeLG
+    color $thirdColor
+    border-radius $borderRadiusSuperellipse
+    transition $delay
+    @media screen and (hover hover)
+      &:hover
+        background-color $secondaryColor

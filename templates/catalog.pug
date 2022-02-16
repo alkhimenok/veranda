@@ -1,10 +1,10 @@
 - var linkList = [{content: 'главная', href: '/', isCurrent: false}, {content: 'каталог', href: '/catalog', isCurrent: true}]
 
 mixin card(img, text, price)
-  li(class="catalog__card card")
-    img(class="card__img _img" src=img alt="card")
-    p(class="card__text _text")!= text
-    h3(class="card__price _subtitle")= price
+  li(class="catalog__card card" data-item="card")
+    img(class="card__img _img" src=img alt="card" data-child='img')
+    p(class="card__text _text" data-child='text')!= text
+    h3(class="card__price _subtitle" data-child='price')= price
     button(class="card__btn _btn") Заказать
 
 doctype html

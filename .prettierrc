@@ -10,7 +10,7 @@
 	"bracketSpacing": true,
 	"bracketSameLine": false,
 	"jsxBracketSameLine": false,
-	"arrowParens": "always",
+	"arrowParens": "avoid",
 	"notUsed": {
 		"rangeStart": 0,
 		"rangeEnd": null,
