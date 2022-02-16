@@ -7,7 +7,7 @@ module.exports = {
 		assets: `${srcFolder}/assets/**/*.*`,
 		templates: `${templatesFolder}/*.pug`,
 		styles: `${srcFolder}/index.styl`,
-		scripts: `${srcFolder}/index.ts`
+		scripts: `${srcFolder}/index.js`
 	},
 	dist: {
 		assets: `${distFolder}/assets`,

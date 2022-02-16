@@ -37,8 +37,6 @@
 		"gulp-stylus": "^2.7.1",
 		"nodemon": "^2.0.15",
 		"stylus": "^0.56.0",
-		"ts-loader": "^9.2.6",
-		"typescript": "^4.5.4",
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {

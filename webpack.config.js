@@ -7,18 +7,17 @@ const getDevtool = () => (isProd() ? false : 'source-map')
 
 module.exports = {
 	context: path.resolve(__dirname, 'client', 'src'),
-	entry: './index.ts',
+	entry: './index.js',
 	mode: getMode(),
 	devtool: getDevtool(),
 	module: {
 		rules: [
 			{
-				test: /\.(js|ts)$/,
-				use: 'ts-loader',
+				test: /\.js$/,
 				exclude: /node_modules/
 			}
 		]
 	},
-	resolve: { extensions: ['.ts', '.js'] },
+	resolve: { extensions: ['.js'] },
 	output: { path: path.resolve(__dirname, 'client', 'dist'), filename: 'index.js', }
 }
