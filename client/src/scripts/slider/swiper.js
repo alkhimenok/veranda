@@ -1,18 +1,21 @@
 import { $slideList, $btnPrev, $btnNext } from '../constants/nodes'
 
+let currentSlide = 0
+
 const handelSwipe = e => {
 	const sliderWidth = $slideList.scrollWidth
 	const totalSlides = $slideList.children.length
 	const slideWidth = sliderWidth / totalSlides
-	let currentSlide = 0
 
 	if (e.target === $btnPrev && currentSlide > 0) {
-		currentSlide--
-	} else if (e.target === $btnNext && currentSlide < totalSlides - 2) {
-		currentSlide++
+		currentSlide -= 1
+	} else if (e.target === $btnNext && currentSlide < totalSlides - 1) {
+		currentSlide += 1
 	} else {
 		return
 	}
+
+	console.log(currentSlide)
 
 	$slideList.style.transform = `translateX(-${slideWidth * currentSlide}px)`
 }
