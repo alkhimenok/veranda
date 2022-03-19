@@ -12,7 +12,7 @@ const handelSwipe = e => {
 	} else if (e.target === $btnNext && currentSlide < totalSlides - 1) {
 		currentSlide += 1
 	} else {
-		return
+		return currentSlide
 	}
 
 	console.log(currentSlide)
